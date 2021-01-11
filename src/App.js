@@ -30,8 +30,23 @@ class App extends Component {
           {/* in => should be shown ? */}
           {/* check what's on the screen for the state of the animation */}
           {/* state refers to the application state */}
-          <Transition in={this.state.showBlock} timeout={700}> 
-            {state => <p>{state}</p>}
+          <Transition 
+          in={this.state.showBlock} 
+          timeout={700}
+          mountOnEnter
+          unmountOnExit> 
+            {state => (
+              <div style={{
+                  backgroundColor:'red',
+                  width:'100px',
+                  height:'100px',
+                  margin: 'auto',
+                  transition:'all .5s ease',
+                  opacity: state === 'exiting' ? 0 : 1
+                }}>
+              </div>
+          )}
+            
           </Transition>
         
         <br/>
