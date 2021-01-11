@@ -14,7 +14,7 @@
 }
 
 .ModalOpen {
-    animation: openModal 1s ease-out forwards;
+    animation: openModal .4s ease-out forwards;
 }
 
 .ModalClosed {
@@ -52,4 +52,12 @@
         opacity: 0;
         transform: translateY(-100%);
     }
+}
+
+.fade-slide-enter-active {
+    animation: openModal .4s ease-out forwards;
+}
+
+.fade-slide-exit-active {
+    animation: closeModal 1s ease-out forwards;
 }
